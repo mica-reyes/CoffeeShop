@@ -9,19 +9,31 @@ Aplicación para gestionar un coffee shop utilizando Jetpack Compose, Firebase, 
 - **Retrofit**: Comunicación con la API de Firebase.
 - **MVVM + Clean Architecture**: Estructura del proyecto para desacoplar responsabilidades.
 - **Kotlin DSL**: Configuración del proyecto en Gradle.
+- **Version Catalog**: Gestión centralizada de dependencias.
 
 ## Estado actual del proyecto
-- Proyecto inicial configurado con **Kotlin DSL**.
+- Proyecto inicial configurado con **Kotlin DSL** y **Version Catalog**.
 - Jetpack Compose.
 - Control de versiones con Git inicializado.
 
+## Uso de Version Catalog
+En este proyecto, utilizamos **Version Catalog** para gestionar las dependencias y sus versiones de forma centralizada en el archivo `libs.versions.toml`.  
+Esto facilita:
+1. Mantener las versiones sincronizadas.
+2. Simplificar las actualizaciones de dependencias.
+3. Garantizar consistencia en todo el proyecto.
+
+**Nota**: A diferencia de proyectos anteriores que utilizaban Groovy o directamente Kotlin DSL, esta implementación mejora la organización y escalabilidad, especialmente para proyectos colaborativos o con múltiples módulos.
+
 ## Próximos pasos
-1. Integrar Firebase al proyecto.
-2. Implementar la estructura de Clean Architecture.
+1. Integrar Firebase al proyecto:
+   Configurar Realtime Database en el proyecto Firebase.
+   Configuración adecuada en google-services.json.
+2. Implementar la estructura de Clean Architecture:
+   Separar el proyecto en capas: Dominio, Datos, y Presentación.
+   Configurar la inyección de dependencias utilizando Dagger/Hilt.
 3. Configurar Retrofit para la comunicación con Firebase.
-4. Crear pantallas iniciales:
-   - Menú de productos.
-   - Autenticación de usuarios.
+4. Crear pantallas iniciales.
 
 ## Buenas prácticas
 ### 1. Testing
