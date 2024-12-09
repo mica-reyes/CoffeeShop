@@ -5,8 +5,8 @@ Aplicación para gestionar un coffee shop utilizando Jetpack Compose, Firebase, 
 
 ## Tecnologías
 - **Jetpack Compose**: Para la interfaz de usuario declarativa.
-- **Firebase**: Backend y base de datos.
-- **Retrofit**: Comunicación con la API de Firebase.
+- **Firebase**: Usado como backend normal para manejar la base de datos (Realtime Database) y almacenamiento de imágenes, sin utilizar la librería oficial de Firebase.
+- **Retrofit**: Interactúa con **Realtime Database** de Firebase (usando la URL con `.json`).
 - **MVVM + Clean Architecture**: Estructura del proyecto para desacoplar responsabilidades.
 - **Kotlin DSL**: Configuración del proyecto en Gradle.
 - **Version Catalog**: Gestión centralizada de dependencias.
@@ -15,6 +15,15 @@ Aplicación para gestionar un coffee shop utilizando Jetpack Compose, Firebase, 
 - Proyecto inicial configurado con **Kotlin DSL** y **Version Catalog**.
 - Jetpack Compose.
 - Control de versiones con Git inicializado.
+
+## Uso de Firebase como Backend
+En este proyecto, **Firebase** se utiliza como un backend tradicional para almacenar datos en **Realtime Database** y gestionar archivos (como imágenes) a través de **Firebase Storage**. No se está utilizando la librería oficial de Firebase, sino que estamos accediendo a los servicios de Firebase usando **Retrofit**.
+
+### Almacenamiento de imágenes
+Las imágenes asociadas a los productos (cafés) serán almacenadas en **Firebase Storage**. **Realtime Database** de Firebase no almacena imágenes directamente, sino que guardará las **URL** de las imágenes almacenadas en Firebase Storage. Así, las imágenes pueden ser accesibles mediante las URLs correspondientes.
+
+### Interacción con Firebase como una API RESTful
+Al agregar el sufijo `.json` a la URL de una base de datos en **Realtime Database** funciona como una API RESTful. De esta forma, los datos pueden ser accesibles y manipulables mediante solicitudes HTTP. 
 
 ## Uso de Version Catalog
 En este proyecto, utilizamos **Version Catalog** para gestionar las dependencias y sus versiones de forma centralizada en el archivo `libs.versions.toml`.  
