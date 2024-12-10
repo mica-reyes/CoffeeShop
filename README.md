@@ -9,7 +9,7 @@ Aplicación para gestionar un coffee shop utilizando Jetpack Compose, Firebase, 
 - **Retrofit**: Interactúa con **Realtime Database** de Firebase (usando la URL con `.json`).
 - **MVVM + Clean Architecture**: Estructura del proyecto para desacoplar responsabilidades.
 - **Kotlin DSL**: Configuración del proyecto en Gradle.
-- [**Version Catalog**](https://developer.android.com/build/migrate-to-catalogs?hl=es-419): Gestión centralizada de dependencias, (forma predeterminada de los proyectos nuevos).
+- [**Version Catalog**](https://developer.android.com/build/migrate-to-catalogs?hl=es-419): las dependencias se administran en un solo lugar y son visibles para todos los módulos, (esta es la forma predeterminada de los proyectos nuevos).
 
 ## Estado actual del proyecto
 - Proyecto inicial configurado con **Kotlin DSL** y **Version Catalog**.
