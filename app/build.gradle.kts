@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    id ("kotlin-kapt")
+    id ("dagger.hilt.android.plugin")
 }
 
 android {
@@ -52,18 +54,25 @@ android {
 
 dependencies {
     // Import the BoM for the Firebase platform
-    //implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    // implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation(platform(libs.firebase.bom))
 
     // Add the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    //implementation("com.google.firebase:firebase-database")
+    // implementation("com.google.firebase:firebase-database")
     implementation(libs.firebase.database)
 
+    // Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
     implementation(libs.coil.compose)
+
+    // Dagger Hilt
+    implementation ("com.google.dagger:hilt-android:2.45")
+    kapt ("com.google.dagger:hilt-compiler:2.45")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+    kapt ("androidx.hilt:hilt-compiler:1.0.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
