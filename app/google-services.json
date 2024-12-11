@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "579133094920",
+    "firebase_url": "https://coffee-shop-48ff4-default-rtdb.firebaseio.com",
+    "project_id": "coffee-shop-48ff4",
+    "storage_bucket": "coffee-shop-48ff4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579133094920:android:95221bc33d064273c765bd",
+        "android_client_info": {
+          "package_name": "com.reyesmicaela.coffeeshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE0dJSQ5m1BsiS9a-gmYun8ogjtjUtZMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
